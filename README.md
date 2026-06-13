@@ -67,6 +67,16 @@ This project addresses these challenges by centralizing process metrics in a sin
 
 ---
 
+## Dashboard
+
+<img width="1313" height="737" alt="executive_summary" src="https://github.com/user-attachments/assets/dbe3fc8f-2fae-4791-97b9-95c59b152573" />
+<img width="1311" height="733" alt="department_analysis" src="https://github.com/user-attachments/assets/b430de91-c49e-4506-be79-aea34253a7b7" />
+<img width="1313" height="733" alt="bottleneck_analysis" src="https://github.com/user-attachments/assets/bff11bd4-ffae-4107-9a77-eb57036d7fb0" />
+<img width="1312" height="732" alt="SLA_compliance_analysis" src="https://github.com/user-attachments/assets/b8473738-d560-4687-b4f5-7286a08a2947" />
+<img width="1312" height="736" alt="cost_analysis" src="https://github.com/user-attachments/assets/22e6f71b-3aa7-4003-a35a-eb30b25e0aab" />
+
+---
+
 ## 📐 KPI Framework
 
 | KPI | Formula | Benchmark |
@@ -166,21 +176,6 @@ This project addresses these challenges by centralizing process metrics in a sin
 
 ---
 
-## 🚀 How to Use This Project
-
-### Excel Dashboard
-1. Open `data/BPO_Process_Dataset.xlsx`
-2. Navigate using sheet tabs: start with **KPI Summary**, then drill into departmental sheets
-3. Use Excel's built-in filter on the **Process Data** sheet to slice by Department, Status, or Process Name
-
-### Power BI Dashboard
-1. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free)
-2. Open `BPO_Efficiency_Dashboard.pbit`
-3. When prompted, point the data source to `data/process_data.csv`
-4. Click **Refresh** — all 5 pages and 13 DAX measures will auto-populate
-5. Use slicers to filter by Department, Date Range, Process Status, or Process Name
-
----
 
 ## 🗂️ Folder Structure
 
@@ -188,22 +183,22 @@ This project addresses these challenges by centralizing process metrics in a sin
 Business-Process-Optimization-Dashboard/
 │
 ├── data/
-│   ├── process_data.csv                  ← Raw dataset (120 rows)
-│   └── BPO_Process_Dataset.xlsx          ← Excel multi-sheet dashboard
+│   ├── dataset.csv                  ← Raw dataset (120 rows)
 │
-├── BPO_Efficiency_Dashboard.pbit         ← Power BI Template (5 pages, 13 measures)
-│
+├── dashboard/
+│   ├── BPO_Efficiency_Dashboard.pbix         ← Power BI Dashboard (5 pages, 13 measures)
+│   ├── BPO Process_Excel Analysis.xlsx          ← Excel multi-sheet dashboard and analysis
+|
 ├── reports/
 │   └── BPO_Recommendations_Report.pdf   ← Business recommendations summary
 │
 ├── screenshots/
-│   ├── dashboard_overview.png
-│   ├── kpi_summary.png
+│   ├── executive_summary.png
+│   ├── department_analysis.png
 │   ├── bottleneck_analysis.png
-│   └── sla_dashboard.png
+│   └── SLA_compliance_analysis.png
+│   └── cost_analysis.png
 │
-├── build_dashboard.py                    ← Python script for Excel generation
-├── build_pbit.py                         ← Python script for .pbit generation
 └── README.md
 ```
 
@@ -213,45 +208,12 @@ Business-Process-Optimization-Dashboard/
 
 | Tool | Purpose |
 |---|---|
-| Python (pandas, openpyxl, numpy) | Data generation, Excel workbook construction |
 | Microsoft Excel | Multi-sheet dashboard, charts, KPI cards |
 | Power BI Desktop | Interactive 5-page BI dashboard |
 | DAX (Power BI) | Custom measures and KPI calculations |
-| Power Query (M Language) | Data transformation and Date dimension |
 | GitHub | Version control and portfolio showcase |
 
 ---
 
-## 📝 Resume-Ready Project Descriptions
-
-**One-line:**  
-Developed a Business Process Optimization dashboard in Excel and Power BI analyzing 120 process records across 7 departments, identifying bottlenecks, SLA breaches, and cost inefficiencies using DAX measures and KPI frameworks.
-
-**Two-line (ATS-friendly):**  
-Built an end-to-end Business Process Optimization & Efficiency Dashboard using Python, Excel, and Power BI to analyze 120 operational records across Finance, Operations, HR, IT, and CX departments. Delivered 5-page interactive Power BI report with 13 DAX measures tracking KPIs including Process Efficiency %, SLA Achievement Rate, Error Rate %, and Cost per Task — identifying 8 high-priority improvement opportunities with projected 20–30% cost reduction.
-
----
-
-## 🎓 Interview Q&A Highlights
-
-**Q: What KPIs did you measure?**  
-A: Process Efficiency %, Productivity %, SLA Achievement Rate, Avg Cycle Time, Error Rate %, Rework Rate %, Task Completion Rate, Cost per Task, and Cycle Time Variance.
-
-**Q: How did you identify bottlenecks?**  
-A: By calculating cycle time variance (actual minus standard) and ranking processes by this metric. Cross-referenced with error rates and SLA breach data to distinguish capacity issues from quality issues.
-
-**Q: What business value does this deliver?**  
-A: The dashboard enables management to prioritize 8 improvement initiatives estimated to reduce process costs by 20–30%, improve SLA compliance to 90%+, and cut error rates by 30–40% through targeted interventions.
-
----
-
-## 📬 Connect
-
-*Project by Debarati | Business Analyst Portfolio*
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat&logo=github)](https://github.com)
-
----
 
 *Built for portfolio demonstration. Dataset is synthetically generated for analytical purposes.*
